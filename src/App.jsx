@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react"
+import { Grid } from "./grid"
 
 const App = () => {
     return (
@@ -6,6 +7,7 @@ const App = () => {
           <div>
             <h1 className="py-5 text-6xl text-center text-white font-bold">Tic Tac</h1>
           </div>
+          <Grid />
         </div>
     )
 }
