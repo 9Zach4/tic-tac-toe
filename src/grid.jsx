@@ -1,9 +1,22 @@
 import React from "react";
+import idleGrid from "./idleGrid"
 
 
 export const Grid = () => (
-    <div className="m-10 flex justify-center">
-      <div className="grid w-12 grid-cols-3 h-20 border-solid border-2 border-black "></div>
+    <div className="m-10 grid grid-col-3">
+        {
+          idleGrid.map((row, index) => {
+            return (
+              <div key={index} className="flex justify-center items-center">
+                {row.map((col, index) => {
+                  return (
+                    <div key={index} className="w-12 h-12 border-solid border border-black"></div>
+                  )
+                })}
+              </div>
+            )
+          })
+        }
     </div>
 )
 
