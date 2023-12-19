@@ -8,7 +8,7 @@ export const Grid = () => (
           idleGrid.map((row, index) => {
             return (
               <div key={index} className="flex justify-center items-center">
-                {row.map((col, index) => {
+                {row.map((bloc, index) => {
                   return (
                     <div key={index} className="w-12 h-12 border-solid border border-black"></div>
                   )
