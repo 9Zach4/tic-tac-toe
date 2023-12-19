@@ -8,7 +8,8 @@ const PLAYER_B = "⭕"
 
 
 
-export const FirstPlayer = () => {
+
+ const FirstPlayer = () => {
 
     const [PLAYER_1, setPLAYER_1] = useState(false);
   
@@ -25,7 +26,9 @@ export const FirstPlayer = () => {
     )
 }
 
-export const SecondPlayer = () => { 
+
+
+ const SecondPlayer = () => { 
     
         const [PLAYER_2, setPLAYER_2] = useState(false);
     
@@ -41,3 +44,21 @@ export const SecondPlayer = () => {
         </div>
         )
     }
+
+
+    const PlayerActive = () => {
+        const [isPlayerActive, setIsPlayerActive] = useState(false)
+   
+
+        useEffect(() => {
+            setIsPlayerActive(!isPlayerActive)
+        }, [!isPlayerActive])
+
+        return(
+            <div>
+                {isPlayerActive onClick ? FirstPlayer() : SecondPlayer()}
+            </div>
+        )
+    }
+    export default PlayerActive
+    
