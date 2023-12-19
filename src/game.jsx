@@ -46,19 +46,19 @@ const PLAYER_B = "⭕"
     }
 
 
-    const PlayerActive = () => {
-        const [isPlayerActive, setIsPlayerActive] = useState(false)
+    // const PlayerActive = () => {
+    //     const [isPlayerActive, setIsPlayerActive] = useState(false)
    
 
-        useEffect(() => {
-            setIsPlayerActive(!isPlayerActive)
-        }, [!isPlayerActive])
+    //     useEffect(() => {
+    //         setIsPlayerActive(!isPlayerActive)
+    //     }, [!isPlayerActive])
 
-        return(
-            <div>
-                {isPlayerActive onClick ? FirstPlayer() : SecondPlayer()}
-            </div>
-        )
-    }
-    export default PlayerActive
+    //     return(
+    //         <div>
+    //             {isPlayerActive onClick ? FirstPlayer() : SecondPlayer()}
+    //         </div>
+    //     )
+    // }
+    // export default PlayerActive
     
