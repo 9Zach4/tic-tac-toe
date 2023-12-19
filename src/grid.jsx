@@ -1,11 +1,11 @@
 import React from "react";
 import idleGrid from "./idleGrid"
-import { Exemple } from "./game";
+import {FirstPlayer, SecondPlayer} from "./game"
 
 
 export const Grid = () => (
     <div className="m-10 grid grid-col-3">
-      <Exemple/>
+     
         {
           idleGrid.map((row, index) => {
             return (
@@ -13,7 +13,8 @@ export const Grid = () => (
                 {row.map((bloc, index) => {
                   return (
                     <div key={index} className="w-12 h-12 border-solid border border-black">
-                      
+                       <FirstPlayer/>
+                       <SecondPlayer/>
                     </div>
                   )
                 })}
