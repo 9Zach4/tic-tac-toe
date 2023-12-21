@@ -6,7 +6,7 @@ import { useState } from 'react';
 const SquareButton = ({value, squaryClick}) => {
 
   return (
-    <button className="border border-black h-12 w-12 bg-white" onClick={squaryClick}>{value}</button>
+    <button className="border border-black h-12 w-12 bg-white text-3xl" onClick={squaryClick}>{value}</button>
   )
  }
 export default SquareButton
@@ -31,7 +31,7 @@ export const Grid = () => {
   // const winner = calculateWinner(squares)
   
     return (
-  <div className="m-10 h-36 w-36 flex flex-wrap">
+  <div className="m-36 h-36 w-36 flex flex-wrap">
     <div className="grid grid-cols-3">
        <SquareButton value={squares[0]} squaryClick={()=>handleClick(0)} />
       <SquareButton value={squares[1]} squaryClick={()=>handleClick(1)}/>
