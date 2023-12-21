@@ -28,7 +28,7 @@ export const Grid = () => {
     setNextMove(!nextMove)
   }
    
-
+const winner = calculateWinner(squares)
     return (
   <div className="m-10 h-36 w-36 flex flex-wrap">
     <div className="grid grid-cols-3">
