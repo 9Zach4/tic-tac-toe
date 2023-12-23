@@ -31,7 +31,7 @@ export const Grid = () => {
   // const winner = calculateWinner(squares)
   
     return (
-  <div className="m-36 h-36 w-36 flex flex-wrap">
+  <div className="m-10 h-36 w-36 flex flex-wrap">
     <div className="grid grid-cols-3">
        <SquareButton value={squares[0]} squaryClick={()=>handleClick(0)} />
       <SquareButton value={squares[1]} squaryClick={()=>handleClick(1)}/>
