@@ -36,8 +36,7 @@ export const Grid = () => {
 
   const [nextMove, setNextMove] = useState(true)
   const [squares, setSquares] = useState(Array(9).fill(null))
-
-
+  
   const handleClick = (i) => {
     if (squares[i] || calculateWinner(squares))
       return

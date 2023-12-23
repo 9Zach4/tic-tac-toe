@@ -1,5 +1,6 @@
 import React from "react"
 import { Grid } from "./grid"
+import { Restart }  from "./button"
 
 const App = () => {
     return (
@@ -7,8 +8,9 @@ const App = () => {
           <div>
             <h1 className="py-5 text-6xl text-center text-white font-bold">Tic Tac Toe</h1>
         </div>
-        <div className="flex justify-center">
-          <Grid/>
+        <div className="flex justify-center flex-col items-center">
+          <Grid />
+          <Restart />          
         </div>
         </div>
     )
