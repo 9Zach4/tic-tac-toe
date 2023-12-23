@@ -1,12 +1,13 @@
-import React from "react";
-import { useState } from 'react';
+import React from "react"
+import { useState } from 'react'
 
-
-
-const SquareButton = ({value, squaryClick}) => {
-
+const SquareButton = ({ value, squaryClick }) => {
+  
   return (
-    <button className="border border-black h-12 w-12 bg-white text-3xl" onClick={squaryClick}>{value}</button>
+    <button className="border border-black h-12 w-12 bg-white text-3xl"
+      onClick={squaryClick}>
+      {value}
+    </button>
   )
  }
 export default SquareButton
@@ -27,15 +28,9 @@ const calculateWinner = (squares) => {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a]
     }
-
-    }
-    return null
-  
   }
- 
-
-
-
+    return null
+}
 
 export const Grid = () => {
 
@@ -44,19 +39,18 @@ export const Grid = () => {
 
 
   const handleClick = (i) => {
-
     if (squares[i] || calculateWinner(squares))
       return
-    const nextSquares = squares.slice()
-    nextSquares[i] = nextMove ? "🐮" : "🤖"
-    setSquares(nextSquares)
-    setNextMove(!nextMove)
+         const nextSquares = squares.slice()
+         nextSquares[i] = nextMove ? "🐮" : "🤖"
+         setSquares(nextSquares)
+         setNextMove(!nextMove)
 
     const winner = calculateWinner(nextSquares) 
-    if (winner) {
-      alert(`${winner} wins!`)
-    }
-}
+      if (winner) {
+        alert (`BIG W FOR ${winner} ‼ 🎉🎉🎉`)
+      }
+  }
     return (
       <div className="m-10 h-36 w-36 flex flex-wrap">
         <div className="grid grid-cols-3">
@@ -76,7 +70,5 @@ export const Grid = () => {
         </div>
       </div>
     )
-
-
-  }
+}
 
